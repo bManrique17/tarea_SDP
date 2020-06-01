@@ -7,10 +7,6 @@
 #include "SedanCar.h"
 
 class CarFactory{
-    private:
-        
-    public:
-        CarFactory();
-        Car* buildCar(CarType);
-        ~CarFactory();
+    public:        
+        static Car* buildCar(CarType);        
 };

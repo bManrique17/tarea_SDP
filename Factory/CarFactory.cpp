@@ -1,10 +1,6 @@
 
 #include "CarFactory.h"
 
-CarFactory::CarFactory(){
-
-}
-
 Car* CarFactory::buildCar(CarType model){
     Car* newCar = nullptr;
     switch (model){
@@ -21,8 +17,4 @@ Car* CarFactory::buildCar(CarType model){
         break;
     }              
     return newCar;
-}
-
-CarFactory::~CarFactory(){
-
 }

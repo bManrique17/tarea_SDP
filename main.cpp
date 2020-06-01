@@ -85,8 +85,6 @@ void singleton(){
 void factory(){
 
     vector <Car*> list_cars;
-    CarFactory* factory = new CarFactory();
-
     int user_option;
     do{
             
@@ -101,15 +99,15 @@ void factory(){
 
         switch (user_option){
             case 1:
-                list_cars.push_back(factory->buildCar(LUXURY));
+                list_cars.push_back(CarFactory::buildCar(LUXURY));
                 cout<<"Luxury creado!"<<endl;
                 break;
             case 2:
-                list_cars.push_back(factory->buildCar(SMALL));
+                list_cars.push_back(CarFactory::buildCar(SMALL));
                 cout<<"Small creado!"<<endl;
                 break;
             case 3:
-                list_cars.push_back(factory->buildCar(SEDAN));
+                list_cars.push_back(CarFactory::buildCar(SEDAN));
                 cout<<"Sedan creado!"<<endl;
                 break;
             default:
@@ -117,8 +115,7 @@ void factory(){
         }
     } while (user_option != 0);
 
-    cout<<endl; 
-    delete factory;
+    cout<<endl;     
 }
 
 void observer(){    
